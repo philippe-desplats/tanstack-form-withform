@@ -10,9 +10,7 @@ import { Toaster } from 'sonner'
 import { AdapterLuxon } from '@mui/x-date-pickers/AdapterLuxon'
 import { LocalizationProvider } from '@mui/x-date-pickers'
 import { palette } from './palette'
-import { shadows } from './shadows'
 import { typography } from './typography'
-import { customShadows } from './custom-shadows'
 
 /*
 |--------------------------------------------------------------------------
@@ -36,10 +34,6 @@ export default function ThemeProvider({ children }: Props) {
 			palette: {
 				...palette('light'),
 			},
-			customShadows: {
-				...customShadows('light'),
-			},
-			shadows: shadows('light'),
 			shape: { borderRadius: 8 },
 			typography,
 		}),

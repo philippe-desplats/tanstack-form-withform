@@ -1,9 +1,3 @@
-/*
-| Developed by Dirupt
-| Filename : layout.tsx
-| Author : Philippe DESPLATS (philippe@dirupt.com)
-*/
-
 import { Viewport } from 'next'
 import { Toaster } from 'sonner'
 import ThemeProvider from '@/theme'

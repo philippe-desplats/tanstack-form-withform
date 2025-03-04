@@ -1,9 +1,3 @@
-/*
-| Developed by Dirupt
-| Filename : utils.service.ts
-| Author : Philippe DESPLATS (philippe@dirupt.com)
-*/
-
 import { DateTime } from 'luxon'
 import { toast } from 'sonner'
 
