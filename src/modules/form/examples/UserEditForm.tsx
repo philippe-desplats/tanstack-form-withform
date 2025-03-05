@@ -28,9 +28,9 @@ const UserProfileForm = () => {
 			<form.AppForm>
 				<h1>User profile</h1>
 
-				<UserInfoForm form={form as any} title="User information" />
+				<UserInfoForm form={form} title="User information" />
 
-				<AddressForm form={form as any} title="Address information" />
+				<AddressForm form={form} title="Address information" />
 
 				<form.AppForm>
 					<form.DebugCard />
