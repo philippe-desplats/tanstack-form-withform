@@ -1,7 +1,6 @@
 'use client'
 
 import { z } from 'zod'
-import { formOptions } from '@tanstack/react-form'
 import { withForm } from '@/modules/form/form-context'
 
 /*
@@ -15,26 +14,12 @@ export const userInfoSchema = z.object({
 	email: z.string().email('Please enter a valid email'),
 })
 
-export type UserInfoFormData = z.input<typeof userInfoSchema>
-
 /*
 |--------------------------------------------------------------------------
 | Form
 |--------------------------------------------------------------------------
 */
-export const userInfoFormOpt = formOptions({
-	defaultValues: {
-		firstName: '',
-		lastName: '',
-		email: '',
-	} as UserInfoFormData,
-	validators: {
-		onChange: userInfoSchema,
-	},
-})
-
 const UserInfoForm = withForm({
-	...userInfoFormOpt,
 	props: {
 		title: 'User Information',
 	},

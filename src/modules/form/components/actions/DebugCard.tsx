@@ -24,8 +24,8 @@ export default function DebugCard({ open = false }: Props) {
 	return (
 		<Card sx={{ mt: 2, border: '1px dashed', borderColor: 'grey.400' }}>
 			<CardContent sx={{ p: 1, '&:last-child': { pb: 1 } }}>
-				<form.Subscribe>
-					{(state) => (
+				<form.Subscribe selector={(state) => [state]}>
+					{([state]) => (
 						<>
 							<Box display="flex" justifyContent="space-between" alignItems="center">
 								<Typography variant="subtitle2" color="text.secondary">

@@ -1,7 +1,6 @@
 'use client'
 
 import { z } from 'zod'
-import { formOptions } from '@tanstack/react-form'
 import { withForm } from '@/modules/form/form-context'
 
 /*
@@ -15,26 +14,12 @@ export const addressSchema = z.object({
 	zipCode: z.string().min(1, 'Zip code is required'),
 })
 
-export type AddressFormData = z.input<typeof addressSchema>
-
 /*
 |--------------------------------------------------------------------------
 | Form
 |--------------------------------------------------------------------------
 */
-export const addressFormOpt = formOptions({
-	defaultValues: {
-		street: '',
-		city: '',
-		zipCode: '',
-	} as AddressFormData,
-	validators: {
-		onChange: addressSchema,
-	},
-})
-
 const AddressForm = withForm({
-	...addressFormOpt,
 	props: {
 		title: 'Address Information',
 	},
